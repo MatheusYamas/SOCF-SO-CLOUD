@@ -11,7 +11,7 @@ def index():
 
 @APP.route('/info')
 def get_info():
-    integrantes = ["Gustavo Tasca", "Matheus Yamamoto", "Mateus Roese", "Victor Ryuki"] 
+    integrantes = ["Matheus Yamamoto Dias", "Mateus Roese Tucunduva", "Victor Ryuki Tamezava"] 
     return jsonify(integrantes=integrantes)
 
 @APP.route('/metricas')
