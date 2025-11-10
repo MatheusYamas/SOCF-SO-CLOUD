@@ -1,0 +1,79 @@
+<!-- Essa parte é um bônus para ficar mais agradável ao usuário -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard SOCF</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            display: grid;
+            place-items: center;
+            min-height: 80vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        pre {
+            background-color: #eee;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: left;
+            min-width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Dashboard do Sistema</h1>
+        
+        <button id="btnInfo">Carregar /info</button>
+        <button id="btnMetricas">Carregar /metricas</button>
+
+        <h3>Resultado:</h3>
+        <pre id="resultado">Clique em um botão para ver os dados...</pre>
+    </div>
+
+    <script>
+        const btnInfo = document.getElementById('btnInfo');
+        const btnMetricas = document.getElementById('btnMetricas');
+        const resultadoEl = document.getElementById('resultado');
+
+        async function fetchData(url) {
+            try {
+                resultadoEl.textContent = 'Carregando...';
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                resultadoEl.textContent = JSON.stringify(data, null, 2);
+
+            } catch (error) {
+                resultadoEl.textContent = 'Erro ao carregar dados: ' + error;
+            }
+        }
+        btnInfo.addEventListener('click', () => fetchData('/info'));
+        btnMetricas.addEventListener('click', () => fetchData('/metricas'));
+    </script>
+
+</body>
+</html>
