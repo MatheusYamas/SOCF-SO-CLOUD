@@ -11,7 +11,7 @@ def index():
 
 @APP.route('/info')
 def get_info():
-    integrantes = ["Matheus Yamamoto Dias", "Mateus Roese Tucunduva", "Victor Ryuki Tamezava"] 
+    integrantes = ["Mateus Roese Tucunduva", "Matheus Yamamoto Dias", "Victor Ryuki Tamezava"] 
     return jsonify(integrantes=integrantes)
 
 @APP.route('/metricas')
@@ -25,10 +25,10 @@ def get_metricas():
     so_versao = platform.version()
 
     metricas = {
-        "pid": pid,
-        "memoria_mb": round(memoria_mb, 2),
-        "uso_cpu_percent": uso_cpu,
-        "sistema_operacional": f"{so_nome} ({so_versao})"
+        "PID": pid,
+        "Memória usada": round(memoria_mb, 2),
+        "Uso da CPU": uso_cpu,
+        "Sistema Operacional": f"{so_nome} ({so_versao})"
     }
     return jsonify(metricas)
 
