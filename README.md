@@ -154,7 +154,7 @@ Ao acessar [http://localhost:8080](https://www.google.com/search?q=http://localh
 {
   "Memória usada": 21.45,
   "PID": 54321,
-  "Sistema Operacional": "Windows (10.0.19045)",
+  "Linux (#35~22.04.1-Ubuntu SMP Mon May 26 18:08:30 UTC 2025)",
   "Uso da CPU": 0.5
 }
 ```
