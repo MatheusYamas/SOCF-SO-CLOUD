@@ -163,7 +163,7 @@ Ao acessar [http://localhost:8080](https://www.google.com/search?q=http://localh
 
 ## 7. Telas da Aplicação (Printscreens)
 
-![Config](./print/config3.png)
+![Config](./print/config3.jpeg)
 ![Config1](./print/config2.jpeg)
 ![config2](./print/config1.jpeg)
 ![Config3](./print/config.jpeg)
