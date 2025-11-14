@@ -158,3 +158,16 @@ Ao acessar [http://localhost:8080](https://www.google.com/search?q=http://localh
   "Uso da CPU": 0.5
 }
 ```
+
+-----
+
+## 7. Telas da Aplicação (Printscreens)
+
+Seguem os prints solicitados para o relatório, incluindo a interface, as saídas JSON e a configuração do deploy no Render.
+
+![Tela principal do dashboard](https://ibb.co/qLhvF95P)
+![Saída JSON da rota /info](https://ibb.co/BHXvpLhX)
+![Saída JSON da rota /metricas](https://ibb.co/MxctPcjW)
+![Configuração do Render - Parte 1](https://ibb.co/bgJjFkyC)
+![Configuração do Render - Parte 2](https://ibb.co/9kLy5WRF)
+![Deploy em andamento no Render](https://ibb.co/39L5wpPb)
